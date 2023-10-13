@@ -22,5 +22,12 @@
             <input type="radio" name="role" value="Admin"> Admin<br>
             <input type="submit" value="Add User">
         </form>
+
+        <?php
+        include_once('connection.php');
+        $stmt = $conn->prepare("SELECT * FROM TblUsers");
+        $stmt->execute();
+        
+        ?>
     </body>
 </html>
