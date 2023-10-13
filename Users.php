@@ -4,7 +4,7 @@
         <title>Users</title>
     </head>
     <body>
-        <form action="addusers.php">
+        <form action="addusers.php" method="post">
             First name:<input type="text" name="forename"><br>
             Last name:<input type="text" name="surname"><br>
             Password:<input type="password" name="passwd"><br>
