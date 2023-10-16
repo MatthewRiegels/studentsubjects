@@ -28,7 +28,7 @@
         $stmt = $conn->prepare("SELECT * FROM TblUsers");
         $stmt->execute();
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-            switch($_POST["role"]){
+            switch($row["Role"]){
                 case 0:
                     $role="Pupil";
                     break;
@@ -38,6 +38,8 @@
                 case 2:
                     $role="Admin";
                     break;
+                }
+            echo("(" . $role . ") ");
             echo($row["Forename"] . ' ' . $row["Surname"] . " - " . $row["House"] . " " . $row["Year"] . "<br>");
         }
         ?>
