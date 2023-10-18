@@ -4,6 +4,7 @@
         <title>Users</title>
     </head>
     <body>
+        <!-- form for adding users -->
         <form action="addusers.php" method = "post">
             First name:<input type="text" name="forename"><br>
             Last name:<input type="text" name="surname"><br>
@@ -23,7 +24,7 @@
             <input type="submit" value="Add User">
         </form>
 
-        <!--  -->
+        <!-- show all users -->
         <?php
         include_once('connection.php');
         $stmt = $conn->prepare("SELECT * FROM TblUsers");
