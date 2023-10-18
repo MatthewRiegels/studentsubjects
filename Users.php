@@ -23,6 +23,7 @@
             <input type="submit" value="Add User">
         </form>
 
+        <!--  -->
         <?php
         include_once('connection.php');
         $stmt = $conn->prepare("SELECT * FROM TblUsers");
@@ -39,8 +40,7 @@
                     $role="Admin";
                     break;
                 }
-            echo("(" . $role . ") ");
-            echo($row["Forename"] . ' ' . $row["Surname"] . " - " . $row["House"] . " " . $row["Year"] . "<br>");
+            echo("(" . $role . ") " . $row["Forename"] . ' ' . $row["Surname"] . " - " . $row["House"] . " " . $row["Year"] . "<br>");
         }
         ?>
     </body>
