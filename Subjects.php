@@ -19,6 +19,9 @@
 
                 remember to check if the teacher exists (idk how to do that)
             -->
+            Subject name:<input type="text" name="subjectname"><br>
+            Teacher name:<input type="text" name="teachername"><br>
+            <input type="submit" value="Add User">
         </form>
 
         <!-- show all subjects -->
