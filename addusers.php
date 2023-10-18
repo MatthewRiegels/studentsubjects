@@ -1,5 +1,5 @@
 <?php
-header('Location: users.php');
+header('Location: users.php'); // if it breaks, comment this line fist
 
 include_once("connection.php");
 switch($_POST["role"]){
