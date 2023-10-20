@@ -5,12 +5,15 @@ include_once("connection.php");
 switch($_POST["role"]){
     case "Pupil":
         $role=0;
+		$year=$_POST["year"];
         break;
     case "Teacher":
 		$role=1;
+		$year=0;
 		break;
 	case "Admin":
 		$role=2;
+		$year=0;
 		break;
 }
 
@@ -28,7 +31,7 @@ $stmt = $conn->prepare("INSERT INTO TblUsers (UserID,Gender,Surname,Forename,Pas
 $stmt->bindParam(':forename', $_POST["forename"]);
 $stmt->bindParam(':surname', $_POST["surname"]);
 $stmt->bindParam(':house', $_POST["house"]);
-$stmt->bindParam(':year', $_POST["year"]);
+$stmt->bindParam(':year', $year);
 $stmt->bindParam(':password', $_POST["passwd"]);
 $stmt->bindParam(':gender', $_POST["gender"]);
 $stmt->bindParam(':role', $role);
