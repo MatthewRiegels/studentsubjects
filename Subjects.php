@@ -6,19 +6,6 @@
     <body>
         <!-- form for adding subjects -->
         <form action="addsubjects.php" method = "post">
-            <!--
-                Make a form to create a new role in this table
-
-                +-------------+-----------------+------+-----+---------+----------------+
-                | Field       | Type            | Null | Key | Default | Extra          |
-                +-------------+-----------------+------+-----+---------+----------------+
-                | SubjectID   | int(4) unsigned | NO   | PRI | NULL    | auto_increment |
-                | Subjectname | varchar(20)     | NO   |     | NULL    |                |
-                | Teacher     | varchar(20)     | NO   |     | NULL    |                |
-                +-------------+-----------------+------+-----+---------+----------------+
-
-                remember to check if the teacher exists (idk how to do that)
-            -->
             Subject name:<input type="text" name="subjectname"><br>
             Teacher name:<input type="text" name="teachername"><br>
             <input type="submit" value="Add Subject">

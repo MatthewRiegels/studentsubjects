@@ -1,5 +1,5 @@
 <?php
-header('Location: users.php'); // if it breaks, comment this line first
+header('Location: Subjects.php'); // if it breaks, comment this line first
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
