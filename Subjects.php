@@ -21,7 +21,7 @@
             -->
             Subject name:<input type="text" name="subjectname"><br>
             Teacher name:<input type="text" name="teachername"><br>
-            <input type="submit" value="Add User">
+            <input type="submit" value="Add Subject">
         </form>
 
         <!-- show all subjects -->
