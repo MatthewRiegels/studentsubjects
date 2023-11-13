@@ -27,7 +27,13 @@ try{
     echo($stud_arr["Surname"] . ', ' . $stud_arr["Forename"] . ' -> ' . $subj_arr["Subjectname"] . ' (' . $subj_arr["Teacher"] . ')');
 }
 catch (PDOException $e){
-    echo "error".$e->getMessage();
+    // SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-1' for key 'PRIMARY'
+    if ($e->getCode() == 23000){
+        echo("This student is  already in this class");
+    }
+    else{
+        echo("error".$e->getMessage());
+    }
 }
 $conn=null;
 ?>
