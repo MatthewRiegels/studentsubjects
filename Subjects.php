@@ -4,6 +4,7 @@
         <title>Subjects</title>
     </head>
     <body>
+        <a href="index.html">back to the homepage</a><br><br>
         <!-- form for adding subjects -->
         <form action="addsubjects.php" method = "post">
             Subject name:<input type="text" name="subjectname"><br>

@@ -4,6 +4,7 @@
         <title>Pupil Studies</title>
     </head>
     <body>
+        <a href="index.html">back to the homepage</a><br><br>
         <form action="addtoclass.php" method = "post">
             <select name = "student">
                 <?php

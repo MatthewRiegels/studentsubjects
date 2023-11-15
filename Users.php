@@ -4,6 +4,7 @@
         <title>Users</title>
     </head>
     <body>
+        <a href="index.html">back to the homepage</a><br><br>
         <!-- form for adding users -->
         <form action="addusers.php" method = "post">
             First name:<input type="text" name="forename"><br>
