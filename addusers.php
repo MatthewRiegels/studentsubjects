@@ -2,6 +2,9 @@
 header('Location: users.php'); // if it breaks, comment this line first
 
 include_once("connection.php");
+
+array_map("htmlspecialchars", $_POST);
+
 switch($_POST["role"]){
     case "Pupil":
         $role=0;
@@ -16,8 +19,6 @@ switch($_POST["role"]){
 		$year=0;
 		break;
 }
-
-array_map("htmlspecialchars", $_POST);
 
 echo $_POST["gender"]."<br>";
 echo $_POST["forename"]."<br>";

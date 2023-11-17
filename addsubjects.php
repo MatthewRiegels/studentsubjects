@@ -1,5 +1,5 @@
 <?php
-header('Location: Subjects.php'); // if it breaks, comment this line first
+// header('Location: Subjects.php'); // if it breaks, comment this line first
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -9,9 +9,13 @@ try{
 
     array_map("htmlspecialchars", $_POST);
 
-    $stmt = $conn->prepare("INSERT INTO TblSubjects (SubjectID,Subjectname,Teacher)VALUES (null,:subjectname,:teachername)");
+    echo($_POST["subjectname"])
+    echo($_POST["teacherid"])
+
+
+    $stmt = $conn->prepare("INSERT INTO TblSubjects (SubjectID,Subjectname,TeacherID)VALUES (null,:subjectname,:teacherid)");
     $stmt->bindParam(':subjectname', $_POST["subjectname"]);
-    $stmt->bindParam(':teachername', $_POST["teachername"]);
+    $stmt->bindParam(':teacherid', $_POST["teacherid"]);
     $stmt->execute();
 }
 catch (PDOException $e){
