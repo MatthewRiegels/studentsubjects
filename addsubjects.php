@@ -9,8 +9,8 @@ try{
 
     array_map("htmlspecialchars", $_POST);
 
-    echo($_POST["subjectname"])
-    echo($_POST["teacherid"])
+    echo($_POST["subjectname"]);
+    echo($_POST["teacherid"]);
 
 
     $stmt = $conn->prepare("INSERT INTO TblSubjects (SubjectID,Subjectname,TeacherID)VALUES (null,:subjectname,:teacherid)");

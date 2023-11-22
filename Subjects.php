@@ -30,7 +30,7 @@
         $stmt = $conn->prepare("SELECT * FROM TblSubjects");
         $stmt->execute();
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){ // how to make this show name??
-            echo($row["Subjectname"] . ": " . $row["TeacherID"]);
+            echo($row["Subjectname"] . ": " . $row["TeacherID"] . "<br>"); // prevent duplicats somehow
         }
         ?>
     </body>
